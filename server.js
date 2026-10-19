@@ -1,4 +1,5 @@
 require('dotenv').config();
+if (process.env.USE_GOOGLE_DNS === 'true') require('dns').setServers(['8.8.8.8','1.1.1.1']);
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
